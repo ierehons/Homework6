@@ -1,42 +1,78 @@
 public class Main {
     public static void main(String[] args) {
-        //case 1
+//case 1
         System.out.println("case 1");
-        int yearsOld = 6;
-        if (yearsOld >= 18) {
-            System.out.println("поздравляем с совершеннолетием!");
-        }        else {
-            System.out.println("совершеннолетие ещё не наступил, нужно немного подождать.");
+        int clientOs = 0;
+        if (clientOs == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке ");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке ");
         }
-        // case 2.2
-        System.out.println("case 2.2");
-        int yearsOld2 = 21;
-        if (yearsOld2 >= 7&& yearsOld2 < 18) {
-            System.out.println("Ребёнок ходит в школу");
-        } else if (yearsOld2 >= 18&& yearsOld2 < 24) {
-            System.out.println("человек уже закончил школу и может отправляться в университет");
+//case 2
+        System.out.println("case 2");
+        int operatingSystem = 1;
+        int clientDeviceYear = 2000;
+        if (operatingSystem==0){
+            if (clientDeviceYear<2015){
+                System.out.println("Установите облегчённую версию приложения для iOS по ссылке");
+            }else {
+                System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        else if (yearsOld2 >= 24) {
-            System.out.println("человек окончил университет и ему пора искать первую работу");
+        } else {
+            if (clientDeviceYear<2015){
+                System.out.println("Установите облегчённую версию приложения для Android по ссылке");
+            }else {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
         }
-        // case 3
-        System.out.println("case 3");
-        int Place = 102;
-        int seating =60;
-        int standing = Place - seating;
-        int usedSeating =10;  //занято сидячих мест
-        int usedStanding = 8;  //занято стоящих мест
-        if (usedSeating < seating){
-            System.out.println("Есть ещё "+ (seating - usedSeating)+ " сидячих места");
+//Case 3
+        System.out.println("Case 3");
+        int year = 2021;
+        if (year % 4 == 0 && year % 100 !=0 || year % 400 == 0){
+            System.out.println(year+ " год является високосным");
+        } else{
+            System.out.println(year+" год является не високосным");
         }
-        else {
-            System.out.println("Сидячих мест нет!");
+// Case 4
+        System.out.println("case 4");
+        int deliveryDistance = 95;
+        int deliveryDays = 1;
+
+        if (deliveryDistance > 20){
+            deliveryDays++;
+                            }
+        if (deliveryDistance > 60){
+            deliveryDays++;
         }
-        if (usedStanding < standing){
-            System.out.println("Есть ещё "+ (standing - usedStanding)+ " стоячих места");
+        System.out.println("Потребутся дней: "+deliveryDays);
+
+//Case 5
+        System.out.println("Case 5");
+        int monthNumber = 12;
+        switch (monthNumber){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("осень");
+                break;
+            default:
+                System.out.println("непрывельный месяц");
         }
-        else {
-            System.out.println("Сотячих мест нет!");
-        }
+
     }
 }
